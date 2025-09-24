@@ -31,7 +31,7 @@ assign_stmt:
 print_stmt:
     | "mostrar" "(" (expr | STRING) ")"
 
-# ROBOT ACTIONS
+# AÇÕES DO ROBÔ
 
 action_stmt:
     | move_stmt
