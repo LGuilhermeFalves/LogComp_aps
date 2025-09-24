@@ -99,8 +99,8 @@ primary:
 
 # LÉXICO
 
-letter = "A"…"Z" | "a"…"z" ;
-digit = "0"…"9" ;
+letter = "A"…"Z" | "a"…"z" 
+digit = "0"…"9" 
 STRING: /"[^"]*"/
 
 
