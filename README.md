@@ -4,10 +4,7 @@ Linguagem que permite programar o comportamento de um robô aspirador de pó
 EBNF
 
 
-program: [statements] ENDMARKER
-
 # GERAL
-# ==================
 
 statements: statement+ 
 
@@ -26,8 +23,7 @@ simple_stmt:
     | print_stmt
     | ';'
 
-# SINSTRUÇÕES SIMPLES
-# =================
+# INSTRUÇÕES SIMPLES
 
 assign_stmt:
     | NAME "=" expr
@@ -36,7 +32,6 @@ print_stmt:
     | "mostrar" "(" (expr | STRING) ")"
 
 # ROBOT ACTIONS
-# =============
 
 action_stmt:
     | move_stmt
@@ -61,7 +56,6 @@ wait_stmt:
     | "esperar" "(" expr ")"
 
 # INSTRUÇÕES COMPOSTAS
-# ===================
 
 if_stmt:
     | "se" "(" expr ")" statement ["senao" statement]
@@ -73,7 +67,6 @@ block:
     | "{" statements "}"
 
 # EXPRESSÕES
-# ===========
 
 expr: equality
 
@@ -104,11 +97,10 @@ primary:
     | "estaNoBase" "(" ")"
     | "obstaculo" "(" ")"
 
-# LEÉXICO
-# ==============
+# LÉXICO
 
-NAME: /[a-zA-Z_][a-zA-Z0-9_]*/
-NUMBER: /[0-9]+/
+letter = "A"…"Z" | "a"…"z" ;
+digit = "0"…"9" ;
 STRING: /"[^"]*"/
 
 
