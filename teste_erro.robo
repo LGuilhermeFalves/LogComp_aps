@@ -1,0 +1,6 @@
+
+
+x = 10  // ERRO: falta ponto e vírgula
+y = 20;
+
+mostrar("Este programa tem erro de sintaxe");

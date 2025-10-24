@@ -1,0 +1,73 @@
+// Programa de exemplo em RoboLang
+// Demonstra todas as funcionalidades da linguagem
+
+// Variáveis
+bateria_minima = 20;
+intensidade = 5;
+x = 0;
+y = 0;
+
+// Mostrar mensagem inicial
+mostrar("Iniciando programa do robô aspirador");
+
+// Loop principal
+enquanto (bateria() > bateria_minima) {
+    // Verificar se há sujeira na posição atual
+    se (sujeira() > 0) {
+        mostrar("Sujeira detectada!");
+        aspirar(intensidade);
+    } senao {
+        mostrar("Posição limpa");
+    }
+    
+    // Verificar obstáculos antes de se mover
+    se (obstaculo() == 0) {
+        andar(1, 0);
+        x = posX();
+        y = posY();
+        mostrar("Nova posição");
+    }
+    
+    // Aguardar um pouco
+    esperar(100);
+}
+
+// Verificar bateria baixa
+se (bateria() <= bateria_minima) {
+    mostrar("Bateria baixa! Retornando para base");
+    voltarBase();
+    
+    se (estaNoBase() == 1) {
+        mostrar("Na base, carregando...");
+        carregar();
+    }
+}
+
+// Testes de expressões aritméticas
+area = 10 * 20;
+metade = area / 2;
+total = metade + 100 - 50;
+
+// Testes de expressões relacionais
+se (total >= 100) {
+    mostrar("Total maior ou igual a 100");
+}
+
+se (x != y) {
+    mostrar("Coordenadas diferentes");
+}
+
+// Teste com expressões complexas
+resultado = (10 + 5) * 2 - 3;
+se (resultado > 0) {
+    andar(resultado, -resultado);
+}
+
+// Bloco vazio (válido)
+{
+}
+
+// Comando vazio (válido)
+;
+
+mostrar("Programa finalizado");
