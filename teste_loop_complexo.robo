@@ -1,0 +1,63 @@
+// ================================================
+// TESTE: Loops Complexos e Aninhados
+// Demonstra loops while aninhados e lógica complexa
+// ================================================
+
+// Teste 1: Loop com múltiplas operações
+mostrar(1000);
+i = 0;
+enquanto (i < 5) {
+    j = i * 2;
+    mostrar(j);
+    i = i + 1;
+}
+
+// Teste 2: Loop com condicionais internos
+mostrar(2000);
+contador = 0;
+enquanto (contador < 10) {
+    se (contador > 5) {
+        mostrar(999);
+    } senao {
+        mostrar(contador);
+    }
+    contador = contador + 1;
+}
+
+// Teste 3: Simulação de patrulha do robô
+mostrar(3000);
+x = 0;
+y = 0;
+passos = 0;
+enquanto (passos < 4) {
+    andar(x, y);
+    mostrar(posX());
+    mostrar(posY());
+    
+    se (sujeira() > 3) {
+        aspirar(8);
+        mostrar(bateria());
+    }
+    
+    x = x + 1;
+    y = y + 1;
+    passos = passos + 1;
+}
+
+// Teste 4: Loop de recarga automática
+mostrar(4000);
+ciclos = 0;
+enquanto (ciclos < 3) {
+    aspirar(15);
+    mostrar(bateria());
+    
+    se (bateria() < 50) {
+        voltarBase();
+        carregar();
+        mostrar(9999);
+    }
+    
+    ciclos = ciclos + 1;
+}
+
+mostrar(0);

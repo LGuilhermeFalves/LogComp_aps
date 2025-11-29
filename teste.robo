@@ -1,0 +1,23 @@
+x = 10;
+y = 5;
+soma = x + y;
+mostrar(soma);
+
+se (x > y) {
+    mostrar(100);
+} senao {
+    mostrar(0);
+}
+
+contador = 0;
+enquanto (contador < 3) {
+    mostrar(contador);
+    contador = contador + 1;
+}
+
+andar(2, 3);
+aspirar(10);
+nivel = bateria();
+mostrar(nivel);
+voltarBase();
+carregar();

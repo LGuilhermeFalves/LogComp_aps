@@ -812,7 +812,7 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 13 "lexer.l"
-{ /* ignore whitespace */ }
+{ }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
@@ -823,7 +823,7 @@ YY_RULE_SETUP
 case 3:
 YY_RULE_SETUP
 #line 15 "lexer.l"
-{ /* ignore single-line comments */ }
+{ }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP

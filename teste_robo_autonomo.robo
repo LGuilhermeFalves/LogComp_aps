@@ -1,0 +1,90 @@
+// ================================================
+// TESTE: Sistema de Robô Autônomo Completo
+// Simula comportamento inteligente do aspirador
+// ================================================
+
+// Inicialização
+mostrar(1000);
+mostrar(bateria());
+mostrar(sujeira());
+
+// Fase 1: Limpeza inicial
+mostrar(2000);
+area_limpeza = 0;
+enquanto (area_limpeza < 3) {
+    x_destino = area_limpeza * 2;
+    y_destino = area_limpeza;
+    
+    andar(x_destino, y_destino);
+    mostrar(posX());
+    mostrar(posY());
+    
+    se (sujeira() > 0) {
+        aspirar(10);
+        mostrar(bateria());
+    } senao {
+        esperar(100);
+    }
+    
+    area_limpeza = area_limpeza + 1;
+}
+
+// Fase 2: Verificação de bateria
+mostrar(3000);
+nivel = bateria();
+mostrar(nivel);
+
+se (nivel < 40) {
+    mostrar(9000);
+    voltarBase();
+    mostrar(posX());
+    mostrar(posY());
+    carregar();
+    mostrar(bateria());
+} senao {
+    mostrar(8000);
+}
+
+// Fase 3: Segunda rodada de limpeza
+mostrar(4000);
+rodada = 0;
+enquanto (rodada < 2) {
+    se (bateria() > 25) {
+        andar(rodada, rodada);
+        
+        se (sujeira() > 2) {
+            aspirar(8);
+        }
+        
+        mostrar(bateria());
+    } senao {
+        voltarBase();
+        carregar();
+        mostrar(9999);
+    }
+    
+    rodada = rodada + 1;
+}
+
+// Fase 4: Finalização
+mostrar(5000);
+se (estaNoBase() == 0) {
+    mostrar(7000);
+    voltarBase();
+    mostrar(posX());
+    mostrar(posY());
+} senao {
+    mostrar(7001);
+}
+
+carregar();
+mostrar(bateria());
+
+// Status final
+mostrar(6000);
+mostrar(posX());
+mostrar(posY());
+mostrar(estaNoBase());
+mostrar(bateria());
+
+mostrar(0);

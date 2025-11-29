@@ -1,0 +1,83 @@
+// ================================================
+// TESTE: Expressões Matemáticas e Relacionais
+// Testa operações aritméticas complexas e comparações
+// ================================================
+
+// Teste 1: Operações aritméticas básicas
+mostrar(1000);
+a = 10;
+b = 3;
+soma = a + b;
+subtracao = a - b;
+multiplicacao = a * b;
+divisao = a / b;
+
+mostrar(soma);
+mostrar(subtracao);
+mostrar(multiplicacao);
+mostrar(divisao);
+
+// Teste 2: Expressões compostas
+mostrar(2000);
+x = 5;
+y = 2;
+z = 3;
+resultado1 = x + y * z;
+mostrar(resultado1);
+
+resultado2 = x * y + z;
+mostrar(resultado2);
+
+resultado3 = x - y + z * 2;
+mostrar(resultado3);
+
+// Teste 3: Comparações relacionais
+mostrar(3000);
+num1 = 10;
+num2 = 20;
+num3 = 10;
+
+maior = num2 > num1;
+mostrar(maior);
+
+menor = num1 < num2;
+mostrar(menor);
+
+igual = num1 == num3;
+mostrar(igual);
+
+diferente = num1 != num2;
+mostrar(diferente);
+
+// Teste 4: Lógica de decisão baseada em cálculos
+mostrar(4000);
+temperatura = 25;
+umidade = 60;
+pontuacao = temperatura + umidade;
+mostrar(pontuacao);
+
+se (pontuacao > 80) {
+    mostrar(100);
+    aspirar(10);
+} senao {
+    mostrar(200);
+    esperar(500);
+}
+
+// Teste 5: Cálculos com sensores
+mostrar(5000);
+nivel_atual = bateria();
+mostrar(nivel_atual);
+
+economia = 100 - nivel_atual;
+mostrar(economia);
+
+se (nivel_atual > 20) {
+    andar(5, 5);
+    aspirar(5);
+} senao {
+    voltarBase();
+    carregar();
+}
+
+mostrar(0);

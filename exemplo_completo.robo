@@ -1,0 +1,119 @@
+// ================================================
+// EXEMPLO COMPLETO - RoboLang
+// Demonstra todas as funcionalidades da linguagem
+// ================================================
+
+// 1. VARIÁVEIS E EXPRESSÕES ARITMÉTICAS
+// ================================================
+a = 10;
+b = 5;
+soma = a + b;
+diferenca = a - b;
+produto = a * b;
+divisao = a / b;
+
+mostrar(soma);       // 15
+mostrar(diferenca);  // 5
+mostrar(produto);    // 50
+mostrar(divisao);    // 2
+
+// 2. OPERADORES RELACIONAIS
+// ================================================
+maior = a > b;       // 1 (verdadeiro)
+menor = a < b;       // 0 (falso)
+igual = a == 10;     // 1
+diferente = a != b;  // 1
+
+mostrar(maior);
+mostrar(menor);
+mostrar(igual);
+mostrar(diferente);
+
+// 3. CONDICIONAIS (IF-ELSE)
+// ================================================
+x = 20;
+y = 10;
+
+se (x > y) {
+    mostrar(100);
+} senao {
+    mostrar(200);
+}
+
+// 4. LOOPS (WHILE)
+// ================================================
+contador = 0;
+enquanto (contador < 5) {
+    mostrar(contador);
+    contador = contador + 1;
+}
+
+// 5. SENSORES DO ROBÔ
+// ================================================
+nivel_bateria = bateria();
+mostrar(nivel_bateria);
+
+quantidade_sujeira = sujeira();
+mostrar(quantidade_sujeira);
+
+posicao_x = posX();
+mostrar(posicao_x);
+
+posicao_y = posY();
+mostrar(posicao_y);
+
+esta_na_base = estaNoBase();
+mostrar(esta_na_base);
+
+tem_obstaculo = obstaculo();
+mostrar(tem_obstaculo);
+
+// 6. AÇÕES DO ROBÔ
+// ================================================
+
+// Movimento
+andar(3, 2);
+mostrar(posX());
+mostrar(posY());
+
+// Limpeza
+aspirar(10);
+mostrar(bateria());
+
+// Retornar à base
+voltarBase();
+mostrar(posX());
+mostrar(posY());
+mostrar(estaNoBase());
+
+// Recarregar
+carregar();
+mostrar(bateria());
+
+// Aguardar
+esperar(1000);
+
+// 7. LÓGICA DE CONTROLE COMPLEXA
+// ================================================
+limite_bateria = 30;
+limite_sujeira = 3;
+
+se (bateria() > limite_bateria) {
+    se (sujeira() > limite_sujeira) {
+        aspirar(5);
+        mostrar(999);
+    }
+}
+
+// 8. OPERAÇÕES MATEMÁTICAS COMPLEXAS
+// ================================================
+resultado = 10 + 5 * 2 - 3;  // 17
+mostrar(resultado);
+
+area = 10 * 5;
+perimetro = 2 * 10 + 2 * 5;
+mostrar(area);
+mostrar(perimetro);
+
+// FIM DO PROGRAMA
+mostrar(0);
